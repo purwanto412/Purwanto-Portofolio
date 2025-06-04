@@ -117,7 +117,7 @@ const About: React.FC = () => {
               <ul className="list-disc list-inside space-y-1 text-primary-light dark:text-light/80">
                 <li>Served as Piping Supervisor and Construction Engineer.</li>
                 <li>Supervised underground and aboveground piping installations.</li>
-                <li>Conducted line checks for routing, support, and specification compliance.</li>
+                <li>Conducted line checks for routing, supports, and specs.</li>
                 <li>Managed punch list, monitored progress, and workforce activities.</li>
               </ul>
             </div>
