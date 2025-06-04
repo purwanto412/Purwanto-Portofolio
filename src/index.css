@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-body bg-light text-primary dark:bg-primary dark:text-light transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-primary dark:text-light mb-8 md:mb-12;
+  }
+  
+  .section-subtitle {
+    @apply text-xl md:text-2xl font-medium text-accent dark:text-secondary-light mb-6;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-md font-medium transition duration-300 inline-flex items-center justify-center;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-light dark:bg-secondary dark:text-primary hover:bg-primary-light dark:hover:bg-secondary-light;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-primary hover:bg-secondary-light;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary dark:border-light dark:text-light hover:bg-primary hover:text-light dark:hover:bg-light dark:hover:text-primary;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-primary-light rounded-lg shadow-card p-6 transition-all duration-300 hover:shadow-card-hover;
+  }
+}
+
+/* Calendar customization */
+.react-calendar {
+  @apply w-full border-0 shadow-none font-body;
+}
+
+.react-calendar__navigation button {
+  @apply text-primary dark:text-light min-w-[44px] bg-transparent;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  @apply bg-gray-100 dark:bg-primary-light;
+}
+
+.react-calendar__tile {
+  @apply text-primary dark:text-light p-2 text-sm font-medium;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  @apply bg-secondary/10 dark:bg-secondary/20 text-primary dark:text-light;
+}
+
+.react-calendar__tile--now {
+  @apply bg-secondary/20 dark:bg-secondary/30 text-primary dark:text-light;
+}
+
+.react-calendar__tile--active {
+  @apply bg-secondary text-primary dark:text-primary;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  @apply bg-secondary text-primary dark:text-primary;
+}
+
+.react-calendar__month-view__weekdays {
+  @apply text-accent dark:text-secondary-light text-sm font-medium;
+}
+
+/* For smooth animations */
+.fadeIn {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.slideUp {
+  animation: slideUp 0.8s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* For mobile menu */
+.mobile-menu {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
